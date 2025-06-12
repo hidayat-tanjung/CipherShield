@@ -1,7 +1,5 @@
 # Password Encryption Tool
-Tools untuk mengamankan password dengan enkripsi AES-128 (Fernet)
-
-Tools ini mengubah password yang tersimpan dalam file teks biasa (pwd.txt) menjadi terenkripsi secara otomatis, kemudian menghapus file aslinya untuk keamanan.
+Tools untuk mengamankan password dengan enkripsi AES-128 (Fernet) dan mengubah password yang tersimpan dalam file teks biasa (pwd.txt) menjadi terenkripsi secara otomatis, kemudian menghapus file aslinya untuk keamanan.
 
 # 🛠 Fitur
 ✅ Enkripsi password menggunakan algoritma Fernet (AES-128)
