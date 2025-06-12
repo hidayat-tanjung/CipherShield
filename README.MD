@@ -24,10 +24,18 @@ pip install cryptography
 ```
 # Cara Penggunaan
 
-1. Buat file password
-
-Buat file bernama `pwd.txt` yang berisi password Anda:
+* Buat file bernama `pwd.txt` yang berisi password Anda:
 ```console
 echo "password_rahasia_anda" > pwd.txt
 ```
+* Eksekusi script Python:
+```console
+python enxcripty.py
+```
+Program akan menghasilkan:
 
+* 🔑 refKey.txt - Kunci enkripsi (simpan dengan aman!)
+
+* 🔒 encryptedPWD.txt - Password terenkripsi
+
+* File pwd.txt akan terhapus otomatis
