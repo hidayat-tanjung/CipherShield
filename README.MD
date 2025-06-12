@@ -1,60 +1,18 @@
-# Password Encryption Tool
-Tools untuk mengamankan password dengan enkripsi AES-128 (Fernet) dan mengubah password yang tersimpan dalam file teks biasa (pwd.txt) menjadi terenkripsi secara otomatis, kemudian menghapus file aslinya untuk keamanan.
-
-# 🛠 Fitur
-✅ Enkripsi password menggunakan algoritma Fernet (AES-128)
-
-✅ Pembuatan kunci enkripsi acak
-
-✅ Penyimpanan kunci dan data terenkripsi terpisah
-
-✅ Penghapusan otomatis file password asli
-
-# ⚙️ Instalasi
-Persyaratan Sistem
-Python 3.6 atau lebih baru
-
-Package `cryptography`
-
-# Cara Install
-```console
-pip install cryptography
-```
-# Cara Penggunaan
-
-* Buat file bernama `pwd.txt` yang berisi password Anda:
-```console
-echo "password_rahasia_anda" > pwd.txt
-```
-* Eksekusi script Python:
-```console
-python CipherShield.py
-```
-Program akan menghasilkan:
-
-* 🔑 `refKey.txt` - Kunci enkripsi (simpan dengan aman!)
-
-* 🔒 `encryptedPWD.txt` - Password terenkripsi
-
-* File pwd.txt akan terhapus otomatis
-
-## ⚠️ Peringatan Keamanan
-* Jangan simpan refKey.txt dan encryptedPWD.txt dalam folder yang sama
-
-* Backup kunci enkripsi (refKey.txt) di lokasi aman
-
-* Tanpa kunci enkripsi, password tidak bisa dikembalikan
-
-## Untuk mendekripsi, Anda memerlukan:
-
-* File `encryptedPWD.txt`
-
-* File `refKey.txt`
-
-* Script dekripsi (terpisah)
-
-## ⚠️ Catatan:
-Tools ini memberikan keamanan dasar. Untuk kebutuhan keamanan tinggi, pertimbangkan menggunakan password manager profesional.
-
-[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/enxcripty)
-
+%% SPET Workflow Diagram
+flowchart TD
+    A([Start]) --> B[Display ASCII Banner]
+    B --> C{Parse Command\nLine Arguments}
+    C -->|Valid Input| D[Verify Input File Exists]
+    C -->|Invalid Input| E[Show Help & Exit]
+    D --> F[Get Encryption Passphrase\n(Min 12 chars)]
+    F --> G[Verify Passphrase Match]
+    G -->|No Match| F
+    G -->|Match| H[Generate Random Salt]
+    H --> I[Derive Fernet Key\n(PBKDF2-SHA256)]
+    I --> J[Read Input File]
+    J --> K[Encrypt Data\n(AES-128-CBC)]
+    K --> L[Write Output:\nSalt + Encrypted Data]
+    L --> M[Securely Wipe\nOriginal File]
+    M --> N[Save Key File]
+    N --> O([Success])
+    D -->|File Not Found| P[Error & Exit]
