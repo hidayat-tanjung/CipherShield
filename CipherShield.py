@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Secure Password Encryption Tool (CipherShield)
+Secure Password Encryption Tool (SCipherShield)
 A robust solution for encrypting sensitive password files using Fernet (AES-128)
 with enhanced security features and colorful ASCII art banner.
 """
@@ -17,7 +17,9 @@ from typing import Tuple
 from pyfiglet import Figlet
 from termcolor import colored
 
-banner = r"""
+def display_banner():
+    """Display the ASCII art banner"""
+    banner = r"""
    _____ _       _               _____ _     _      _     _ 
   / ____(_)     | |             / ____| |   (_)    | |   | |
  | |     _ _ __ | |__   ___ _ _| (___ | |__  _  ___| | __| |
@@ -25,12 +27,10 @@ banner = r"""
  | |____| | |_) | | | |  __/ |  ____) | | | | |  __/ | (_| |
   \_____|_| .__/|_| |_|\___|_| |_____/|_| |_|_|\___|_|\__,_|
           | |                                               
-          |_|                                               
-
-                                                                                                                                                                                                              
-     [!] By : IZUMY
-"""
-print(banner)
+          |_|"""
+    print(colored(banner, 'cyan'))
+    print(colored("\nSecure Password Encryption Tool", 'yellow'))
+    print(colored("⚡ By: IZUMY\n", 'magenta'))
    
 
 def generate_fernet_key(password: str, salt: bytes) -> bytes:
