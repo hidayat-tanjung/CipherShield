@@ -18,4 +18,16 @@ Python 3.6 atau lebih baru
 
 Package `cryptography`
 
-Cara Install
+# Cara Install
+```console
+pip install cryptography
+```
+# Cara Penggunaan
+
+1. Buat file password
+
+Buat file bernama `pwd.txt` yang berisi password Anda:
+```console
+echo "password_rahasia_anda" > pwd.txt
+```
+
