@@ -34,9 +34,9 @@ python enxcripty.py
 ```
 Program akan menghasilkan:
 
-* 🔑 refKey.txt - Kunci enkripsi (simpan dengan aman!)
+* 🔑 `refKey.txt` - Kunci enkripsi (simpan dengan aman!)
 
-* 🔒 encryptedPWD.txt - Password terenkripsi
+* 🔒 `encryptedPWD.txt` - Password terenkripsi
 
 * File pwd.txt akan terhapus otomatis
 
