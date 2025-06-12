@@ -30,7 +30,7 @@ echo "password_rahasia_anda" > pwd.txt
 ```
 * Eksekusi script Python:
 ```console
-python enxcripty.py
+python CipherShield.py
 ```
 Program akan menghasilkan:
 
