@@ -1,4 +1,5 @@
-## ChipherShield
+## 🔐 ChipherShield
+Description:
 ChipherShield is a robust Python-based solution for encrypting sensitive password files using Fernet (AES-128) with enhanced security features. The tool provides:
 
 * Strong encryption using PBKDF2 key derivation
@@ -14,7 +15,6 @@ ChipherShield is a robust Python-based solution for encrypting sensitive passwor
 * Data integrity: Includes salt in encrypted output for added security
 * Clean deletion: Securely overwrites original files before deletion
 * User-friendly: Color-coded output and clear instructions
-
 ![deepseek_mermaid_20250612_562aad](https://github.com/user-attachments/assets/222d7bb7-84cd-45bc-9790-920b00e328f7)
 
 ##  Installation
@@ -79,6 +79,76 @@ You can create a standalone executable using PyInstaller:
 ```console
 pip install pyinstaller
 pyinstaller --onefile spet.py
+```
+
+## 🔐 ChiperKey - Secure File Encryption Tool
+![deepseek_mermaid_20250612_02863e](https://github.com/user-attachments/assets/0b14b311-4ce8-494b-91c4-5052c16ee919)
+
+Description:
+A robust Python-based utility for encrypting and decrypting files using AES-256 cryptography with PBKDF2 key derivation. Designed for protecting sensitive data with military-grade encryption.
+
+## Features:
+* 256-bit AES encryption (Fernet implementation)
+* PBKDF2 key derivation with 480,000 iterations
+* Random salt generation for each operation
+* Dual-layer protection (key file + passphrase)
+* Password confirmation and complexity enforcement
+
+## 🛠️ Usage Guide
+Encrypting Files
+```console
+python ChiperKey.py encrypt -i confidential.docx -o secure.enc -k secret.key
+```
+
+Process:
+
+1. You'll be prompted to enter (and confirm) a passphrase (minimum 12 characters)
+2. Generates two files:
+   - secure.enc (encrypted data + salt)
+   - secret.key (derived encryption key)
+  
+     
+Decrypting Files
+```console
+python ChiperKey.py decrypt -i secure.enc -o document.docx -k secret.key
+```
+Requirements:
+* Original key file used for encryption
+* Correct passphrase
+
+⚠️ Critical Security Notes
+1. Key File (*.key)
+   * Contains the derived encryption key (not your passphrase)
+   * Cannot be regenerated without the original passphrase
+   * Store separately from encrypted files
+2. Passphrase Requirements:
+   * Minimum 12 characters
+   * Not stored anywhere in the system
+   * Example of strong passphrase: C0mpl3x!P@ss2024
+
+Common Errors:
+```console
+❌ Wrong passphrase or key mismatch!
+❌ Passphrases don't match!
+❌ Encryption/Decryption failed: [error details]
+```
+
+## 🔒 Security Best Practices
+
+```console
+gpg -c secret.key  # Encrypt key file with GPG
+```
+
+## 📋 Complete Workflow Example
+
+Encrypt a financial report:
+```console
+python ChiperKey.py encrypt -i Q2_report.xlsx -o Q2_encrypted.enc -k finance2024.key
+```
+
+Decrypt when needed:
+```console
+python ChiperKey.py decrypt -i Q2_encrypted.enc -o Q2_restored.xlsx -k finance2024.key
 ```
 
 [![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/CipherShield)
