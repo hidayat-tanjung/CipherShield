@@ -39,3 +39,10 @@ Program akan menghasilkan:
 * 🔒 encryptedPWD.txt - Password terenkripsi
 
 * File pwd.txt akan terhapus otomatis
+
+## ⚠️ Peringatan Keamanan
+* Jangan simpan refKey.txt dan encryptedPWD.txt dalam folder yang sama
+
+* Backup kunci enkripsi (refKey.txt) di lokasi aman
+
+* Tanpa kunci enkripsi, password tidak bisa dikembalikan
