@@ -46,3 +46,17 @@ Program akan menghasilkan:
 * Backup kunci enkripsi (refKey.txt) di lokasi aman
 
 * Tanpa kunci enkripsi, password tidak bisa dikembalikan
+
+## Untuk mendekripsi, Anda memerlukan:
+
+* File `encryptedPWD.txt`
+
+* File `refKey.txt`
+
+* Script dekripsi (terpisah)
+
+## ⚠️ Catatan:
+Tools ini memberikan keamanan dasar. Untuk kebutuhan keamanan tinggi, pertimbangkan menggunakan password manager profesional.
+
+[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/enxcripty)
+
