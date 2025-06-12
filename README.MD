@@ -5,8 +5,11 @@ Tools ini mengubah password yang tersimpan dalam file teks biasa (pwd.txt) menja
 
 # 🛠 Fitur
 ✅ Enkripsi password menggunakan algoritma Fernet (AES-128)
+
 ✅ Pembuatan kunci enkripsi acak
+
 ✅ Penyimpanan kunci dan data terenkripsi terpisah
+
 ✅ Penghapusan otomatis file password asli
 
 # ⚙️ Instalasi
