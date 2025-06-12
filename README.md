@@ -34,6 +34,12 @@ pip install cryptography pyfiglet termcolor
 python CipherShield.py -i input.txt -o encrypted.dat -k secret.key
 ```
 
+Build in Docker:
+```console
+docker build -t spet .
+docker run -v $(pwd):/data spet -i /data/input.txt -o /data/encrypted.dat -k /data/key.key
+```
+
 ## Example Workflow
 1. Create a sample password file:
 ```console
