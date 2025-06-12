@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Secure Password Encryption Tool (SCipherShield)
+Secure Password Encryption Tool (CipherShield)
 A robust solution for encrypting sensitive password files using Fernet (AES-128)
 with enhanced security features and colorful ASCII art banner.
 """
